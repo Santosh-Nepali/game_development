@@ -22,9 +22,10 @@ Your project should use the following technologies:
 
 ## Application design and planning
 
-
-
 ## Login Page (16.11.2026), Gökhan Korkmaz
 
-Implemented the Login page based on the prototype, including form validation, password recovery link and frontend login handling. 
+Implemented the Login page based on the prototype, including form validation, password recovery link and frontend login handling.
 
+## signup page (15.11.2026), Santosh Nepali
+
+Define the structure of the projects with different folders such as assets, css data, docs, html, js and a signup html page.

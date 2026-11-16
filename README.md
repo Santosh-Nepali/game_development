@@ -1,14 +1,14 @@
 # Mini Miner
 
-🚀 About Group Member
-Name: Santosh Nepali, Alireza, Gokhan
+🚀 About Group Members:
+Name: Santosh Nepali, Alireza, Gökhan Korkmaz
 University: Metropolia University of Applied Science
-Faculty: Bachelor of Information Technology
+Faculty of Technology, Bachelor of Information Technology
 Group: TXL26S1-B
 
 ## Tools Used
 
-Your project should uses the following technologies:
+Your project should use the following technologies:
 
 - **HTML** – structure and content
 - **CSS** – styling and responsive layout
@@ -21,3 +21,10 @@ Your project should uses the following technologies:
 ## Project idea
 
 ## Application design and planning
+
+
+
+## Login Page (16.11.2026), Gökhan Korkmaz
+
+Implemented the Login page based on the prototype, including form validation, password recovery link and frontend login handling. 
+

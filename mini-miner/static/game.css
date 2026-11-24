@@ -11,7 +11,6 @@ body {
     color: #222226;
     font-family: system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
 }
-body 
 
 
 .card {
@@ -76,4 +75,440 @@ input:focus-visible {
 @media (max-width: 480px) {
     .row { grid-template-columns: 1fr; gap: 0; }
     .card { padding: 1.5rem; }
+}
+
+.login-page {
+    background-image: url("./images/backgrounds/welcome_background.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.login-page .btn.primary {
+    color: transparent;
+    background-image: url("./images/buttons/login.webp"); 
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+    border: none;
+    height: 60px;
+}
+
+.login-page .btn.secondary {
+    color: transparent;
+    background-image: url("./images/buttons/exit.webp"); 
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+    border: none;
+    height: 60px;
+}
+
+.login-page .card {
+    background-image: url("./images/boards/login_board.webp");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+    box-shadow: none;
+    border-radius: 0;
+}
+
+.login-page input[type="email"],
+.login-page input[type="password"] {
+    background-image: url("./images/assets/textbox_login.webp");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+.login-page label {
+    display: none;
+}
+
+.login-page form {
+    padding-top: 55px;
+}
+
+.login-page a {
+    display:block;
+    margin-bottom: 10px;
+}
+
+.login-page .btn.secondary {
+    margin-top: 8px;
+}
+
+.login-page a {
+    display: block;
+    margin-bottom: 10px;
+    color: #f4d58d;
+    text-decoration: none;
+    text-align: center;
+}
+
+.login-page #message {
+    color: #f4d58d;
+    text-align: center;
+    margin-top: 10px;
+}
+
+
+
+.help-page {
+    background-image: url("./images/backgrounds/main_game_background.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 0;
+}
+
+.help-menu {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    text-align: center;
+    padding-top: 8%;
+}
+
+.help-menu h1 {
+    color: #f4d58d;
+    font-size: 42px;
+    font-weight: bold;
+    text-shadow:
+        2px 2px 0 #3a2415,
+        -2px -2px 0 #3a2415,
+        2px -2px 0 #3a2415,
+        -2px 2px 0 #3a2415;
+}
+
+.help-content {
+    width: 60%;
+    max-width: 700px;
+    min-height: 250px;
+    margin: 40px auto 25px;
+    padding: 30px;
+
+    background: rgba(0, 0, 0, 0.45);
+    border: 3px solid #f4d58d;
+    border-radius: 12px;
+
+    color: white;
+}
+
+.help-section {
+    display: none;
+}
+
+.help-section.active {
+    display: block;
+}
+
+.help-section h2 {
+    color: #f4d58d;
+    font-size: 30px;
+}
+
+.help-section p {
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+.help-navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.help-navigation button {
+    border: 2px solid #f4d58d;
+    background: #3a2415;
+    color: #f4d58d;
+    padding: 10px 18px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.help-navigation button:hover {
+    background: #f4d58d;
+    color: #3a2415;
+}
+
+.help-navigation .active {
+    background: #f4d58d;
+    color: #3a2415;
+}
+
+.back-to-game {
+    display: inline-block;
+    margin-top: 30px;
+    color: #f4d58d;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.help-page {
+    background-image: url("./images/backgrounds/main_game_background.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.help-menu {
+    text-align: center;
+    padding-top: 35vh;
+}
+
+.help-menu h1 {
+    color: #f4d58d;
+}
+
+.help-section {
+    display: none;
+    color: white;
+}
+
+.help-section.active {
+    display: block;
+}
+
+.help-section h2 {
+    color: #f4d58d;
+}
+
+.help-navigation {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.help-navigation button {
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.back-to-game {
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.level-page {
+    background-image: url("./images/backgrounds/main_game_background.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 0;
+}
+
+.level-menu {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+.level-page .miner-box {
+    position: absolute;
+    top: 15%;
+    left: 45%;
+    transform: translateX(-50%);
+}
+
+.level-page .miner-box img {
+    width: 150px;
+}
+
+.level-page .winch-treasure-box {
+    position: absolute;
+    top: 26%;
+    left: 48%;
+}
+
+.level-page .winch-treasure-box img {
+    width: 180px;
+    height: auto;
+    display: block;
+}
+
+.level-title {
+    position: absolute;
+    top: 39%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.level-title h1 {
+    margin: 0;
+    color: #f4d58d;
+    font-size: 40px;
+    font-weight: bold;
+    text-shadow:
+        2px 2px 0 #3a2415,
+        -2px -2px 0 #3a2415,
+        2px -2px 0 #3a2415,
+        -2px 2px 0 #3a2415;
+}
+
+.level-info {
+    position: absolute;
+    top: 48%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 45px;
+}
+
+.target-score {
+    text-align: center;
+}
+
+.target-score img {
+    width: 150px;
+    display: block;
+}
+
+.target-score p {
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: -48px;
+}
+
+.time {
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.level-buttons {
+    position: absolute;
+    top: 61%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.level-buttons img {
+    height: 55px;
+    width: auto;
+    display: block;
+}
+
+.level-buttons a {
+    color: #f4d58d;
+    font-size: 22px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+
+.main-menu-page {
+    background-image: url("./images/backgrounds/main_game_background.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 0;
+}
+
+.main-menu {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+.main-board {
+    position: absolute;
+    top: 60%;
+    left: -5%;
+    transform: translate(-50%, -50%);
+    width: 800px;
+}
+
+.main-board > img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.main-menu .miner-box {
+    position: absolute;
+    top: 15%;
+    left: -5%;
+    transform: translateX(-50%);
+}
+
+.main-menu .miner-box img {
+    width: 150px;
+}
+
+.main-menu .level {
+    position: absolute;
+    top: 35%;
+    left: -5%;
+    transform: translateX(-50%);
+}
+
+.main-menu .level img {
+    width: 400px;
+    height: auto;
+    display: block;
+}
+
+.main-menu-buttons {
+    position: absolute;
+    top: 46%;
+    left: -5%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.main-menu-buttons img {
+    height: 80px;
+    width: auto;
+    display: block;
+}
+
+.menu-text {
+    position: absolute;
+    top: 79%;
+    left: -5%;
+    transform: translateX(-50%);
+    width: 100%;
+    text-align: center;
+    color: #f4d58d;
+    font-size: 24px;
+    font-weight: bold;
+    text-shadow:
+        2px 2px 0 #3a2415,
+        -2px -2px 0 #3a2415,
+        2px -2px 0 #3a2415,
+        -2px 2px 0 #3a2415;
+}
+
+.main-menu .winch-treasure-box {
+    position: absolute;
+    top: 26%;
+    left: 5%;
+    transform: translateX(-50%);
+}
+
+.main-menu .winch-treasure-box img {
+    width: 180px;
+    height: auto;
+    display: block;
 }

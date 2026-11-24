@@ -36,8 +36,59 @@ if (loginForm) {
     const email = document.querySelector("#email").value;
     const password = document.querySelector("#password").value;
     const message = document.querySelector("#message");
-    
+
     // Login successful message
     message.textContent = "You have successfully logged in to the game!";
+  });
+}
+
+// Help page navigation
+const helpSections = document.querySelectorAll(".help-section");
+const helpTabs = document.querySelectorAll(".help-tab");
+
+if (helpSections.length > 0) {
+  let currentHelp = 0;
+
+  function showHelp(index) {
+    helpSections.forEach(function (section) {
+      section.classList.remove("active");
+    });
+
+    helpTabs.forEach(function (tab) {
+      tab.classList.remove("active");
+    });
+
+    helpSections[index].classList.add("active");
+    helpTabs[index].classList.add("active");
+  }
+
+  helpTabs.forEach(function (tab, index) {
+    tab.addEventListener("click", function () {
+      currentHelp = index;
+      showHelp(currentHelp);
+    });
+  });
+
+  const previousHelp = document.querySelector("#previousHelp");
+  const nextHelp = document.querySelector("#nextHelp");
+
+  previousHelp.addEventListener("click", function () {
+    currentHelp--;
+
+    if (currentHelp < 0) {
+      currentHelp = helpSections.length - 1;
+    }
+
+    showHelp(currentHelp);
+  });
+
+  nextHelp.addEventListener("click", function () {
+    currentHelp++;
+
+    if (currentHelp >= helpSections.length) {
+      currentHelp = 0;
+    }
+
+    showHelp(currentHelp);
   });
 }

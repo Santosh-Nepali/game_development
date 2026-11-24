@@ -1,35 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Log in – Mini Miner</title>
-    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css') }}">
-    <script src="{{url_for('static', filename='script/script.js') }}" defer></script>
-</head>
-<body>
-    <main class="panel">
-        <a class="back" href="{{url_for('home')}}">&larr; Back</a>
-        <h1>Welcome back, miner!</h1>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link href="{{url_for('static', filename='css/game.css') }}" rel="stylesheet" />
+    <script src="../static/main.js" defer></script>
+  </head>
+  <body class="login-page">
+    <main class="card">
+      <form id="loginForm">
+        <div class="field">
+          <label for="email">Email (USER)</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter your email"
+            required
+          />
+        </div>
 
-        <form id="loginForm">
-            <div class="field">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" autocomplete="email" required>
-            </div>
+        <div class="field">
+          <label for="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Enter your password"
+            required
+          />
+        </div>
+        <a href="forgotPassword.html">Forgot your password?</a>
 
-            <div class="field">
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password" autocomplete="current-password" required>
-            </div>
+        <button type="submit" class="btn primary">Login</button>
+        <button type="button" class="btn secondary">Exit</button>
 
-            <button type="submit" class="img-btn">
-                <img src="{{url_for('static', filename='assets/images/login.webp')}}" alt="Log in" width="886" height="360">
-            </button>
-
-            <p class="switch">New to the mine? <a href="{{url_for('signup')}}">Sign up</a></p>
-            <p id="message" role="status"></p>
-        </form>
+        <p id="message" role="status"></p>
+      </form>
     </main>
-</body>
+  </body>
 </html>

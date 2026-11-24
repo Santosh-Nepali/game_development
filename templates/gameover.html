@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Over – Mini Miner</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/gameover.css') }}">
+    <script src="{{url_for('static', filename='script/script.js') }}" defer></script>
+</head>
+<body>
+    <img src="{{url_for('static', filename='assets/images/sad_miner.webp')}}" alt="Sad Miner face" width="180" height="200" >
+    <main class="panel">
+        <h1>Game Over</h1>
+        <pre> Time's up !! You did your best but it's not enough</pre>
+        <table border="0">
+            <tr>
+                <td>Final Score : </td>
+                <td>................</td>
+            </tr>
+            <tr>
+                <td>Target score : </td>
+                <td>................</td>
+            </tr>
+            <tr>
+                <td>Level reached : </td>
+                <td>................</td>
+             </tr>
+        </table>
+    </main>
+</body>
+</html>

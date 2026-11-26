@@ -48,7 +48,7 @@ body {
 }
 
 .tagline {
-    margin: 0.75rem 0 0;
+    margin: 0rem 0 0;
     font-size: clamp(1.05rem, 2.5vw, 1.4rem);
     font-weight: 700;
     color: var(--gold);
@@ -157,3 +157,5 @@ input:focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; }
 @media (prefers-reduced-motion: reduce) {
     .menu a, .img-btn { transition: none; }
 }
+
+

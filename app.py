@@ -19,8 +19,8 @@ def signup():
     return render_template("signup.html")
 
 
-@app.route("/gameover")
-def gameover():
+@app.route("/overgame")
+def overgame():
     return render_template("gameover.html")
 
 

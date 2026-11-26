@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Emilys+Candy&display=swap");
+
+.login-page {
+    margin: 0;
+    min-height: 100vh;
+
+    background-image: url("../assets/images/backgrounds/welcome_background.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-page .card {
+    width: 520px;
+    min-height: 600px;
+
+    background-image: url("../assets/images/boards/login_board.webp");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    background-color: transparent;
+    box-shadow: none;
+    border-radius: 0;
+
+    padding: 70px 70px 50px;
+    box-sizing: border-box;
+}
+
+.login-page form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding-top: 70px;
+}
+
+.login-page label {
+    display: none;
+}
+
+.login-page input[type="email"],
+.login-page input[type="password"] {
+    width: 330px;
+    height: 60px;
+
+    background-image: url("../assets/images/textbox_login.webp");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    background-color: transparent;
+    border: none;
+    outline: none;
+
+    box-sizing: border-box;
+    padding: 0 20px;
+
+    color: #3b1f0a;
+    font-size: 16px;
+}
+
+.login-page input::placeholder {
+    color: #6b4a2b;
+}
+
+.login-page input:-webkit-autofill,
+.login-page input:-webkit-autofill:hover,
+.login-page input:-webkit-autofill:focus,
+.login-page input:-webkit-autofill:active {
+    -webkit-text-fill-color: #3b1f0a !important;
+    -webkit-box-shadow: 0 0 0 100px transparent inset !important;
+    background-image: url("../assets/images/textbox_login.webp") !important;
+    background-size: 100% 100% !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+}
+
+.login-page .field {
+    margin-bottom: 15px;
+}
+
+.login-page a {
+    display: block;
+    margin: 5px 0 15px;
+
+    color: #f4d58d;
+    text-decoration: none;
+    text-align: center;
+
+    font-family: "Emilys Candy", cursive;
+    font-size: 18px;
+
+    text-shadow: 0 2px 2px #3b1f0a;
+}
+
+.login-page .btn {
+    width: 320px;
+    height: 75px;
+
+    padding: 0;
+    margin: 8px 0;
+
+    cursor: pointer;
+}
+
+.login-page .btn.primary {
+    color: transparent;
+
+    background-image: url("../assets/images/buttons/login.webp");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    background-color: transparent;
+    border: none;
+}
+
+.login-page .btn.secondary {
+    color: transparent;
+
+    background-image: url("../assets/images/buttons/exit.webp");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    background-color: transparent;
+    border: none;
+
+    margin-top: 12px;
+}
+
+.login-page #message {
+    color: #f4d58d;
+    text-align: center;
+    margin-top: 10px;
+
+    text-shadow: 0 2px 2px #3b1f0a;
+}

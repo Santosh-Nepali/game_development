@@ -3,19 +3,33 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login</title>
-    <link href="{{url_for('static', filename='css/game.css') }}" rel="stylesheet" />
-    <script src="../static/main.js" defer></script>
+
+    <title>Log in – Mini Miner</title>
+
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/login.css') }}"
+    />
+
+    <script
+      src="{{ url_for('static', filename='script/login.js') }}"
+      defer
+    ></script>
   </head>
+
   <body class="login-page">
     <main class="card">
+
       <form id="loginForm">
+
         <div class="field">
           <label for="email">Email (USER)</label>
+
           <input
             type="email"
             id="email"
             name="email"
+            autocomplete="email"
             placeholder="Enter your email"
             required
           />
@@ -23,20 +37,31 @@
 
         <div class="field">
           <label for="password">Password</label>
+
           <input
             type="password"
             id="password"
             name="password"
+            autocomplete="current-password"
             placeholder="Enter your password"
             required
           />
         </div>
-        <a href="forgotPassword.html">Forgot your password?</a>
 
-        <button type="submit" class="btn primary">Login</button>
-        <button type="button" class="btn secondary">Exit</button>
+        <a href="forgotPassword.html">
+          Forgot your password?
+        </a>
+
+        <button type="submit" class="btn primary">
+          Login
+        </button>
+
+        <button type="button" class="btn secondary">
+          Exit
+        </button>
 
         <p id="message" role="status"></p>
+
       </form>
     </main>
   </body>

@@ -30,7 +30,9 @@ Implemented the Login page based on the prototype, including form validation, pa
 
 Define the structure of the projects with different folders such as assets, css data, docs, html, js and a signup html page.
 
-## Login, help, main-menu and level2 pages done to be reviewed (24.11.2026)
+## Login, help, main-menu and level2 pages done to be reviewed (24.11.2026), Gökhan Korkmaz
 The FE of pages mentioned above done and pushed for review. The changes will be implemented in accordance with the sprint review.
 
-## main-menu renewed (26.11.2026)
+## Login and Main Menu Renewed (26.11.2026), Gökhan Korkmaz
+Renewed the Login and Main Menu pages according to the game prototype. Implemented the Login page with dedicated CSS and JavaScript files, 
+AJAX login handling and Flask integration. Updated the Main Menu layout and connected the required navigation.

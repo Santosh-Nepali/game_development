@@ -26,22 +26,6 @@ if (signupForm) {
   });
 }
 
-const loginForm = document.querySelector("#loginForm");
-
-// Run Login code only on the Login page
-if (loginForm) {
-  loginForm.addEventListener("submit", function (event) {
-    event.preventDefault();
-
-    const email = document.querySelector("#email").value;
-    const password = document.querySelector("#password").value;
-    const message = document.querySelector("#message");
-
-    // Login successful message
-    message.textContent = "You have successfully logged in to the game!";
-  });
-}
-
 // Help page navigation
 const helpSections = document.querySelectorAll(".help-section");
 const helpTabs = document.querySelectorAll(".help-tab");

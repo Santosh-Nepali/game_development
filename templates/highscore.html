@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>High scores – Mini Miner</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/highscores.css')}}">
+    <script src="{{url_for('static', filename='script/highscores.js')}}" defer></script>
+</head>
+<body>
+    <main class="page">
+        <h1 class="visually-hidden">High scores</h1>
+
+        <div class="board">
+            <img class="board-img" src="{{url_for('static', filename='assets/images/boards/board_highscore.webp')}}" alt="" width="1331" height="1049">
+            <!-- the rows are filled in by js/highscores.js -->
+            <div class="table" id="scoreTable" role="table" aria-label="High scores"></div>
+        </div>
+
+        <a class="exit" href="#">
+            <img src="{{url_for('static', filename='assets/images/buttons/exit.webp')}}" alt="Exit" width="631" height="242">
+        </a>
+    </main>
+</body>
+</html>

@@ -24,5 +24,10 @@ def overgame():
     return render_template("gameover.html")
 
 
+@app.route("/highscores")
+def highscores():
+    return render_template("highscore.html")
+
+
 if __name__ == "__main__":
     app.run(host="127.0.0.1", port=3000, debug=True, use_reloader=True)

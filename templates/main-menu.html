@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MiniMiner - Main Menu</title>
+
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/main-menu.css') }}"
+    />
+  </head>
+
+  <body class="main-menu-page">
+    <main class="main-menu">
+      <img
+        class="game-logo"
+        src="{{ url_for('static', filename='assets/images/Golden Miniminer game logo.png') }}"
+        alt="MiniMiner"
+      />
+
+      <img
+        class="start-board"
+        src="{{ url_for('static', filename='assets/images/boards/board_start.webp') }}"
+        alt="Main menu board"
+      />
+
+      <img
+        class="winch-treasure"
+        src="{{ url_for('static', filename='assets/images/winch_treasure.webp') }}"
+        alt="Winch and treasure"
+      />
+      <p class="level-instruction">
+        Collect treasures - Reach your target<br />
+        Beat the clock - Level Up!
+      </p>
+
+      <img
+        class="start-game-button"
+        src="{{ url_for('static', filename='assets/images/buttons/start_game.png') }}"
+        alt="Start Game"
+      />
+
+      <div class="secondary-buttons">
+        <img
+          class="secondary-button"
+          src="{{ url_for('static', filename='assets/images/buttons/how_to_play.webp') }}"
+          alt="How to Play"
+        />
+
+        <img
+          class="secondary-button"
+          src="{{ url_for('static', filename='assets/images/buttons/high_scores.webp') }}"
+          alt="High Scores"
+        />
+      </div>
+
+      <img
+        class="exit-button"
+        src="{{ url_for('static', filename='assets/images/buttons/exit.webp') }}"
+        alt="Exit"
+      />
+    </main>
+  </body>
+</html>

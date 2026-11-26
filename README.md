@@ -29,3 +29,8 @@ Implemented the Login page based on the prototype, including form validation, pa
 ## signup page (15.11.2026), Santosh Nepali
 
 Define the structure of the projects with different folders such as assets, css data, docs, html, js and a signup html page.
+
+## Login, help, main-menu and level2 pages done to be reviewed (24.11.2026)
+The FE of pages mentioned above done and pushed for review. The changes will be implemented in accordance with the sprint review.
+
+## main-menu renewed (26.11.2026)

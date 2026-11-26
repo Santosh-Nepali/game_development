@@ -19,8 +19,8 @@ def signup():
     return render_template("signup.html")
 
 
-@app.route("/gameover")
-def gameover():
+@app.route("/overgame")
+def overgame():
     return render_template("gameover.html")
 
 @app.route("/")
@@ -31,6 +31,11 @@ def index():
 @app.route("/main-menu")
 def main_menu():
     return render_template("main-menu.html")
+
+
+@app.route("/highscores")
+def highscores():
+    return render_template("highscore.html")
 
 
 if __name__ == "__main__":

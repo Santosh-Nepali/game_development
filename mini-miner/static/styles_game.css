@@ -1,0 +1,356 @@
+/* Base and stage */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100svh;
+  display: grid;
+  place-items: center;
+  background: #190d07;
+  color: #fff2c4;
+  font-family: 'Trebuchet MS', sans-serif;
+}
+
+button {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+button:focus-visible {
+  outline: 3px solid white;
+  outline-offset: 3px;
+}
+
+button:active {
+  filter: brightness(.9);
+}
+
+img {
+  display: block;
+}
+
+.game {
+  position: relative;
+  width: min(100vw,177.777svh);
+  aspect-ratio: 16 / 9;
+  container-type: inline-size;
+  isolation: isolate;
+  overflow: hidden;
+  background: #5c260c;
+}
+
+.scene-image, .panel-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  pointer-events: none;
+}
+
+.logo {
+  position: absolute;
+  left: 40.8%;
+  top: 0;
+  width: 19%;
+  height: 7.8%;
+  object-fit: contain;
+}
+
+
+/* Shop slots */
+.shop {
+  position: absolute;
+  left: 2.5%;
+  top: 2.5%;
+  width: 33%;
+  height: 26%;
+}
+
+.offer {
+  position: absolute;
+  top: 13%;
+  width: 27%;
+  height: 80%;
+  color: #3a160b;
+}
+
+.offer:nth-of-type(1) {
+  left: 6.5%;
+}
+
+.offer:nth-of-type(2) {
+  left: 36.5%;
+}
+
+.offer:nth-of-type(3) {
+  left: 66.5%;
+}
+
+.offer h2 {
+  position: absolute;
+  inset: 4% 0 auto;
+  height: 24%;
+  margin: 0;
+  text-align: center;
+  font-size: 1.12cqw;
+  font-weight: 900;
+  line-height: 1.05;
+}
+
+.offer .icon {
+  position: absolute;
+  left: 12%;
+  top: 24%;
+  width: 76%;
+  height: 43%;
+  object-fit: contain;
+}
+
+.price {
+  position: absolute;
+  left: 50%;
+  top: 68%;
+  transform: translateX(-50%);
+  padding: 0 .65cqw;
+  border-radius: 1cqw;
+  background: #7c3614;
+  color: #fff4d5;
+  white-space: nowrap;
+  font-size: 1.3cqw;
+  font-weight: 900;
+  line-height: 1.5cqw;
+}
+
+.coin {
+  color: #ffdc22;
+}
+
+.buy {
+  position: absolute;
+  left: 2.5%;
+  bottom: 0;
+  width: 95%;
+  height: 20%;
+}
+
+.buy img, .use img, .tool img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+
+/* Compact inventory */
+.inventory {
+  position: absolute;
+  left: 9.5%;
+  top: 28.3%;
+  width: 19%;
+  aspect-ratio: 524 / 143;
+}
+
+.inventory .count {
+  position: absolute;
+  left: 29%;
+  top: 29%;
+  width: 29%;
+  height: 44%;
+  display: grid;
+  place-items: center;
+  color: #52200b;
+  font-size: 1.2cqw;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.inventory .use {
+  position: absolute;
+  left: 70%;
+  top: 28%;
+  width: 24%;
+  height: 47%;
+}
+
+
+/* Scoreboard and tools */
+.hud {
+  position: absolute;
+  left: 61.3%;
+  top: 8.3%;
+  width: 38%;
+  height: 20.2%;
+  padding: 1cqw .9cqw .7cqw;
+  display: flex;
+  gap: .5cqw;
+  border: .3cqw solid #ffa933;
+  border-radius: 1.3cqw;
+  background: repeating-linear-gradient(0deg,#9a3d0c 0,#b95717 2cqw,#d77b25 2.15cqw,#8b350b 2.3cqw);
+  box-shadow: inset 0 0 0 .22cqw #582207,0 .35cqw .3cqw #210d08b0;
+}
+
+.stat {
+  position: relative;
+  flex: 1;
+  min-width: 0;
+}
+
+.stat > img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+
+.value {
+  position: absolute;
+  left: 14%;
+  top: 63%;
+  width: 72%;
+  text-align: center;
+  color: #fff4db;
+  font-size: 1.85cqw;
+  font-weight: 900;
+  line-height: 2.5cqw;
+  text-shadow: .12cqw .12cqw #51220d;
+  white-space: nowrap;
+}
+
+.tools {
+  position: absolute;
+  right: 1.5%;
+  top: .5%;
+  display: flex;
+  gap: 1cqw;
+}
+
+.tool {
+  width: 4.1cqw;
+  height: 4.1cqw;
+}
+
+
+/* Miner and machine */
+.actor {
+  position: absolute;
+  object-fit: contain;
+}
+
+.boy {
+  left: 40.7%;
+  top: 8.6%;
+  width: 7.8%;
+  height: 22.6%;
+}
+
+.machine {
+  left: 47.5%;
+  top: 16.2%;
+  width: 10%;
+  height: 14.8%;
+}
+
+.claw {
+  left: 50.4%;
+  top: 31.6%;
+  width: 4.4%;
+  height: 7.1%;
+}
+
+.platform {
+  position: absolute;
+  left: 38%;
+  top: 29.5%;
+  width: 22.5%;
+  height: 2.3%;
+  border: .2cqw solid #71300b;
+  border-radius: .3cqw;
+  background: linear-gradient(#f9b449,#bf5b18 50%,#8b380e);
+  box-shadow: 0 .35cqw .15cqw #34150688;
+}
+
+.cable {
+  position: absolute;
+  left: 52.45%;
+  top: 28%;
+  width: .35%;
+  height: 4.7%;
+  background: linear-gradient(90deg,#25282a,#96999a,#25282a);
+}
+
+.mine {
+  position: absolute;
+  left: 5%;
+  right: 5%;
+  top: 38%;
+  bottom: 3%;
+  pointer-events: none;
+}
+
+
+/* Messages and menus */
+.toast {
+  position: absolute;
+  left: 50%;
+  bottom: 5%;
+  transform: translateX(-50%);
+  padding: .6cqw 1.2cqw;
+  border: .14cqw solid #ffc343;
+  border-radius: 1cqw;
+  background: #321708ed;
+  font-size: 1.2cqw;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.toast.show {
+  visibility: visible;
+}
+
+dialog {
+  width: min(450px,85vw);
+  padding: 25px;
+  border: 4px solid #ffb938;
+  border-radius: 20px;
+  background: #843709;
+  color: #ffefc0;
+  text-align: center;
+  box-shadow: 0 15px 50px #000b;
+}
+
+dialog::backdrop {
+  background: #160e08a0;
+  backdrop-filter: blur(6px);
+}
+
+dialog h2 {
+  margin: 0 0 20px;
+  font-size: 30px;
+}
+
+dialog label {
+  display: block;
+  margin: 20px 0;
+}
+
+dialog input {
+  accent-color: #ffbd28;
+}
+
+dialog button {
+  display: block;
+  margin: 15px auto;
+  padding: 10px 24px;
+  border: 2px solid #ffc64c;
+  border-radius: 12px;
+  background: linear-gradient(#70d414,#159200);
+  font-size: 20px;
+  font-weight: 900;
+}
+

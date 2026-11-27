@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Miner</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+</head>
+
+<body>
+    <main class="welcome">
+        <h1 class="game-title">Welcome to </h1>
+        <img src="{{url_for('static', filename='assets/images/miniminer_logo.png')}}" alt="miniminer logo" width="486"
+            height="160">
+        <p class="tagline">Dig deep. Find treasure.</p>
+        <nav class="menu" aria-label="Account">
+            <a href="{{url_for('login')}}">
+                <img src="{{url_for('static', filename='assets/images/login.webp')}}" alt="Log in" width="886"
+                    height="360">
+            </a>
+            <a href="{{url_for('signup')}}">
+                <img src="{{url_for('static', filename='assets/images/signup.webp')}}" alt="Sign up" width="887"
+                    height="361">
+            </a>
+        </nav>
+    </main>
+</body>
+
+</html>

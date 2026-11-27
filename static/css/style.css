@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Emilys+Candy&display=swap');
+*, *::before, *::after { box-sizing: border-box; }
+
+:root {
+    --cream: #fff3d1;
+    --brown-dark: #3b1f0a;
+    --amber: #e08a2e;
+    --gold: #ffd24a;
+}
+
+html { background: #2a1206; }
+
+/* Background image: fixed behind everything, works on phones too */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background: #2a1206 url("../assets/images/welcome_background.webp") center / cover no-repeat;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    min-height: 100dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    color: var(--cream);
+    font-family: "Trebuchet MS", "Segoe UI", system-ui, sans-serif;
+}
+
+/* ---------- Welcome page ---------- */
+.welcome { text-align: center; }
+
+.game-title {
+    margin: 0;
+    font-family: "Emilys Candy", serif;
+    font-size: clamp(2.8rem, 9vw, 5.5rem);
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: 0.03em;
+    color: var(--cream);
+    -webkit-text-stroke: 0.12em var(--brown-dark);
+    paint-order: stroke fill;
+    text-shadow: 0 6px 0 var(--brown-dark), 0 10px 24px rgba(0, 0, 0, 0.6);
+}
+
+.tagline {
+    margin: 0rem 0 0;
+    font-size: clamp(1.05rem, 2.5vw, 1.4rem);
+    font-weight: 700;
+    color: var(--gold);
+    text-shadow: 0 2px 0 var(--brown-dark);
+}
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.25rem;
+    margin-top: 2rem;
+}
+
+/* ---------- Image buttons ---------- */
+.menu a,
+.img-btn {
+    display: block;
+    width: min(280px, 70vw);
+    transition: transform 0.15s ease, filter 0.15s ease;
+}
+.menu img,
+.img-btn img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.menu a:hover,
+.img-btn:hover {
+    transform: translateY(-3px) scale(1.04);
+    filter: brightness(1.1);
+}
+.menu a:active,
+.img-btn:active { transform: scale(0.97); }
+
+.img-btn {
+    margin: 1.25rem auto 0;
+    padding: 0;
+    border: 0;
+    background: none;
+    cursor: pointer;
+}
+
+.menu a:focus-visible,
+.img-btn:focus-visible {
+    outline: 4px solid var(--gold);
+    outline-offset: 4px;
+    border-radius: 16px;
+}
+
+/* ---------- Login / sign up panel ---------- */
+.panel {
+    width: min(100%, 440px);
+    padding: 1.75rem;
+    background: rgba(42, 18, 6, 0.88);
+    border: 4px solid var(--amber);
+    border-radius: 20px;
+    box-shadow: 0 0 0 4px var(--brown-dark), 0 12px 40px rgba(0, 0, 0, 0.6);
+}
+
+.panel h1 {
+    margin: 0.5rem 0 1.25rem;
+    font-size: 1.8rem;
+    text-align: center;
+    color: var(--gold);
+    text-shadow: 0 3px 0 var(--brown-dark);
+}
+
+.back { color: var(--cream); font-size: 0.95rem; text-decoration: none; }
+.back:hover { text-decoration: underline; }
+
+.row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.field { margin-bottom: 1rem; }
+
+label { display: block; margin-bottom: 0.35rem; font-weight: 700; }
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 0.7rem 0.8rem;
+    border: 3px solid var(--brown-dark);
+    border-radius: 10px;
+    background: #fff6e0;
+    color: var(--brown-dark);
+    font-size: 1rem;
+}
+input:focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; }
+
+.hint { display: block; margin-top: 0.3rem; font-size: 0.85rem; color: #e9c99a; }
+
+.check { display: flex; align-items: flex-start; gap: 0.6rem; margin: 1.25rem 0 0.5rem; }
+.check input { width: 1.2rem; height: 1.2rem; margin-top: 0.15rem; accent-color: var(--amber); }
+.check label { margin: 0; font-weight: 400; }
+
+.switch { margin: 1.25rem 0 0; text-align: center; }
+.switch a { color: var(--gold); font-weight: 700; }
+
+#message { min-height: 1.4em; margin: 1rem 0 0; text-align: center; font-weight: 700; color: #9be28b; }
+
+@media (max-width: 480px) {
+    .row { grid-template-columns: 1fr; gap: 0; }
+    .panel { padding: 1.25rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .menu a, .img-btn { transition: none; }
+}
+
+

@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign up</title>
-    <link rel="stylesheet" href="./css/game.css">
-    <script src="./js/main.js" defer></script>
+    <title>Sign up – Mini Miner</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css') }}">
+    <script src="{{url_for('static', filename='script/script.js') }}" defer></script>
 </head>
 <body>
-    <main class="card">
-        <h1>Create your account</h1>
-        <p class="subtitle">Fill in the details below to sign up.</p>
+    <main class="panel">
+        <a class="back" href="{{url_for('home')}}">&larr; Back</a>
+        <h1>Join the miner team!</h1>
 
         <form id="signupForm">
             <div class="row">
@@ -38,14 +38,14 @@
 
             <div class="check">
                 <input type="checkbox" id="age" name="age" required>
-                <label for="age">I confirm that I am 13 years old or older.</label>
+                <label for="age">I confirm that I am 12 years old or older.</label>
             </div>
 
-            <button type="submit" class="btn primary">Sign up</button>
+            <button type="submit" class="img-btn">
+                <img src="{{url_for('static', filename='assets/images/signup.webp')}}" alt="Sign up" width="887" height="361">
+            </button>
 
-            <p class="divider">Already have an account?</p>
-            <a href="login.html" class="btn secondary">Log in</a>
-
+            <p class="switch">Already a miner? <a href="{{url_for('login')}}">Log in</a></p>
             <p id="message" role="status"></p>
         </form>
     </main>

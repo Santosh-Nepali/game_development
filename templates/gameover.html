@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game over – Mini Miner</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/gameover.css')}}">
+    <script src="{{url_for('static', filename='script/gameover.js')}}" defer></script>
+</head>
+<body>
+    <main class="gameover">
+        <h1 class="visually-hidden">Game over</h1>
+        <div class="board">
+            <img class="board-img" src="{{url_for('static', filename='assets/images/boards/board_gameover.webp')}}" alt="" width="1745" height="843">
+
+            <div class="board-content">
+                <img class="miner" src="{{url_for('static', filename='assets/images/sad_miner.webp')}}"
+                     alt="A sad miner resting his chin on his hand" width="960" height="1161">
+
+                <div class="results">
+                    <dl class="stats">
+                        <div class="stat">
+                            <dt>Level reached</dt>
+                            <dd id="level">1</dd>
+                        </div>
+                        <div class="stat">
+                            <dt>Final score</dt>
+                            <dd id="score">0</dd>
+                        </div>
+                        <div class="stat">
+                            <dt>Target score</dt>
+                            <dd id="target">0</dd>
+                        </div>
+                    </dl>
+                </div>
+            </div>
+        </div>
+
+        <p class="note" id="note" role="status"></p>
+        <a class="play-again" href="#">
+            <img src="{{url_for('static', filename='assets/images/buttons/play_again_simple.webp')}}" alt="Play again" width="2127" height="646">
+        </a>
+        <a class="menu-link" href="#">Back to main menu</a>
+    </main>
+</body>
+</html>

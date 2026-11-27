@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>
+      Mini Miner — Game field
+    </title>
+    <link rel="stylesheet" href="styles_game.css?v=6">
+  </head>
+  <body>
+    <main class="game" aria-label="Mini Miner game field">
+      <img class="scene-image" src="images/backgrounds/main_game_background.png" alt="" aria-hidden="true">
+      <img class="logo" data-asset="logo" src="images/assets/Golden Miniminer game logo.png" alt="miniminer">
+      <section class="shop" aria-label="Shop">
+        <img class="panel-image" src="images/boards/upgrade_board.png" alt="" aria-hidden="true">
+        <article class="offer">
+          <h2>
+            WINCH
+            <br>
+            UPGRADE
+          </h2>
+          <img class="icon" data-asset="winch" src="images/assets/winch1.png" alt="winch">
+          <div class="price">
+            <span class="coin">
+              ◉
+            </span>
+            <span id="winch-price">
+              600
+            </span>
+          </div>
+          <button class="buy" data-buy="winch">
+            <img data-asset="upgrade_button" src="images/buttons/upgrade_button.png" alt="UPGRADE">
+          </button>
+        </article>
+        <article class="offer">
+          <h2>
+            HOOK
+            <br>
+            UPGRADE
+          </h2>
+          <img class="icon" data-asset="hook" src="images/assets/hook1.png" alt="hook">
+          <div class="price">
+            <span class="coin">
+              ◉
+            </span>
+            <span id="hook-price">
+              400
+            </span>
+          </div>
+          <button class="buy" data-buy="hook">
+            <img data-asset="upgrade_button" src="images/buttons/upgrade_button.png" alt="UPGRADE">
+          </button>
+        </article>
+        <article class="offer">
+          <h2>
+            BUY
+            <br>
+            DYNAMITE
+          </h2>
+          <img class="icon" data-asset="bomb" src="images/assets/bomb.png" alt="bomb">
+          <div class="price">
+            <span class="coin">
+              ◉
+            </span>
+            300
+          </div>
+          <button class="buy" data-buy="bomb">
+            <img data-asset="buy_button" src="images/buttons/buy_button.png" alt="BUY">
+          </button>
+        </article>
+      </section>
+      <section class="inventory" aria-label="Dynamite inventory">
+        <img class="panel-image" src="images/boards/bomb_bord.png" alt="" aria-hidden="true">
+        <span class="count" id="bombs">
+          x3
+        </span>
+        <button class="use" id="use">
+          <img data-asset="use_buttons" src="images/buttons/use_buttons.png" alt="USE">
+        </button>
+      </section>
+      <section class="hud wood" aria-label="Game statistics">
+        <div class="stat">
+          <img data-asset="level_board" src="images/boards/level_board.png" alt="LEVEL">
+          <div class="value" id="level">
+            4
+          </div>
+        </div>
+        <div class="stat">
+          <img data-asset="score_board" src="images/boards/score_board.png" alt="SCORE">
+          <div class="value" id="score">
+            1250
+          </div>
+        </div>
+        <div class="stat">
+          <img data-asset="target_board" src="images/boards/target_board.png" alt="TARGET">
+          <div class="value" id="target">
+            3000
+          </div>
+        </div>
+        <div class="stat">
+          <img data-asset="coins_board" src="images/boards/coins_board.png" alt="COINS">
+          <div class="value" id="coins">
+            850
+          </div>
+        </div>
+        <div class="stat">
+          <img data-asset="time_board" src="images/boards/time_board.png" alt="TIME">
+          <div class="value" id="time">
+            01:20
+          </div>
+        </div>
+      </section>
+      <nav class="tools">
+        <button class="tool" id="pause" aria-label="Pause game">
+          <img data-asset="pause" src="images/buttons/pause.png" alt="Pause">
+        </button>
+        <button class="tool" id="settings" aria-label="Settings">
+          <img data-asset="setting" src="images/buttons/setting.png" alt="Settings">
+        </button>
+      </nav>
+      <div class="platform">
+      </div>
+      <img class="actor boy" data-asset="boy" src="images/assets/boy1.png" alt="Miner">
+      <img class="actor machine" data-asset="winch" src="images/assets/winch1.png" alt="Winch">
+      <div class="cable">
+      </div>
+      <img class="actor claw" data-asset="hook" src="images/assets/hook1.png" alt="Hook">
+      <div class="mine" id="mine" aria-label="Empty underground play area">
+      </div>
+      <output class="toast" id="toast" aria-live="polite">
+      </output>
+    </main>
+    <dialog id="pause-menu">
+      <h2>
+        PAUSED
+      </h2>
+      <button id="resume">
+        RESUME
+      </button>
+      <button id="restart">
+        RESTART
+      </button>
+    </dialog>
+    <dialog id="settings-menu">
+      <h2>
+        SETTINGS
+      </h2>
+      <label>
+        Sound
+        <input id="sound" type="checkbox" checked>
+      </label>
+      <label>
+        Volume
+        <input id="volume" type="range" min="0" max="100" value="70">
+      </label>
+      <button id="close-settings">
+        BACK
+      </button>
+    </dialog>
+    <script src="game.js?v=6" defer>
+    </script>
+  </body>
+</html>

@@ -6,10 +6,10 @@
   Each score is an object:  { name: "Maria", score: 4820, gold: 312 }
 
   Where the scores come from (first one found wins):
-    1. your Flask backend:  GET /api/highscores  ->  JSON list of scores
+    1. Flask backend:  GET /highscores  ->  JSON list of scores
     2. localStorage key "miner-highscores" (a JSON list, saved by the game)
-    3. SAMPLE_SCORES below, so the board is never empty while you build the game.
-       Delete SAMPLE_SCORES once your backend works.
+    3. SAMPLE_SCORES below, so the board is never empty while we build the game.
+       we can delete SAMPLE_SCORES once our backend works.
 */
 
 const MAX_ROWS = 10;
